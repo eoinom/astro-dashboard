@@ -11,7 +11,7 @@ const products: Product[] = await fetch('https://dummyjson.com/products')
 
 <Layout title="Welcome to Astro.">
 	<CategoryTags products={products} client:load />
-	<ProductTable products={products} />
+	<ProductTable products={products} client:load />
 </Layout>
 
 <style>
