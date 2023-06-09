@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProductTable from '../components/ProductTable.svelte';
+import CategoryTags from '../components/CategoryTags.svelte';
 import type { Product } from '../types/Product';
 
 const products: Product[] = await fetch('https://dummyjson.com/products')
@@ -9,6 +10,7 @@ const products: Product[] = await fetch('https://dummyjson.com/products')
 ---
 
 <Layout title="Welcome to Astro.">
+	<CategoryTags products={products} client:load />
 	<ProductTable products={products} />
 </Layout>
 
