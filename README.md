@@ -10,6 +10,9 @@ The following libraries are used build the dashboard:
 - Vue: [Vuetify](https://vuetifyjs.com/en/)
 - Additional layout styling: [Tailwind CSS](https://tailwindcss.com/)
 
+![image](https://github.com/eoinom/astro-dashboard/assets/29586163/79c1d9db-6941-4e8b-a6dc-27a92809f5ea)
+
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
