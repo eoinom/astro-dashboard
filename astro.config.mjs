@@ -7,13 +7,18 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), vue(), svelte(), tailwind({
-    // Disable injecting a basic `base.css` import on every page.
-    config: { applyBaseStyles: false },
-  })],
+  integrations: [
+    react(), 
+    vue({ appEntrypoint: '/src/pages/_app'}), 
+    svelte(), 
+    tailwind({
+      // Disable injecting a basic `base.css` import on every page.
+      config: { applyBaseStyles: false },
+    })
+  ],
   vite: {
     ssr: {
-      noExternal: ['@smui/**/*']
+      noExternal: ['@smui/**/*', 'vuetify']
     }
   }
 });
